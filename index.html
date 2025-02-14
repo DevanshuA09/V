@@ -21,68 +21,47 @@
 	<div id="content">
 		<div id="code">
 			<span class="comments">##</span><br/>
-			<span class="comments"># I am a programmer,</span><br/>
-			<span class="comments"># so I write code to celebrate Valentine's Day in coder's way.</span><br/>
+			<span class="comments"># A love story in code.</span><br/>
 			<span class="comments">##</span><br/>
-			i = Boy(<span class="string">"Qingcai Cui"</span>);<br/>
-			u = Girl(<span class="string">"Qian Ma"</span>);<br/>
-			<span class="comments"># Oct 14, 2018, I meet you because of PyCon 2018. </span><br/>
-			i.meet(u)<br/>
-			<span class="comments"># Afterwards, I confessed to you. </span><br/>
-			i.confess(u)<br/>
-			<span class="comments"># Nov 5, 2018, You became my girlfriend.</span><br/>
-			u.accepted(i)<br/>
-			<span class="comments"># Since then, we spent harmony happiness life every day.</span><br/>
-			happy(u, i)<br/>
-			<span class="comments"># We enjoy studying together.</span><br/>
-			study(u, i)<br/>
-			<span class="comments"># We enjoy cuisine together.</span><br/>
-			dine(u, i)<br/>
-			<span class="comments"># We enjoy appointment together.</span><br/>
-			appoint(u, i)<br/>
-			<span class="comments"># We enjoy vacation together.</span><br/>
-			vacation(u, i)<br/>
-			<span class="comments"># Sometimes there are a few conflicts between us.</span><br/>
-			conflict(u, i, sometimes=<span class="keyword">True</span>)<br/>
-			<span class="comments"># But we are getting more and more in harmony together.</span><br/>
-			u.in_harmony_with(i) <br/>
-			i.in_harmony_with(u) <br/>
-			<span class="comments"># You are the greatest love of my life.</span><br/>
-			while <span class="keyword">True</span>:<br/>
-			<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br/>
-			<span class="placeholder"></span><span class="placeholder"></span>u = everything<br/>
-			<span class="placeholder"></span><span class="keyword">else</span>:<br/>
-			<span class="placeholder"></span><span class="placeholder"></span>everything = u<br/>
-			<span class="comments"># Waiting me marries you, we will be the happiest couple in the world.</span><br/>
-			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
-			i.live_happily_forever_with(u)<br/>
-			<span class="comments"># I love you forever.</span><br/>
+			boy = Boy(<span class="string">"Devansu"</span>);<br/>
+			girl = Girl(<span class="string">"Barenya"</span>);<br/>
+			<span class="comments"># July 21, 2022 - We started talking on her birthday. </span><br/>
+			boy.meet(girl)<br/>
+			<span class="comments"># Since then, I have been in love.</span><br/>
+			boy.love(girl, since=<span class="keyword">True</span>)<br/>
+			<span class="comments"># Many beautiful moments together.</span><br/>
+			happy(girl, boy)<br/>
+			study(girl, boy)<br/>
+			dine(girl, boy)<br/>
+			vacation(girl, boy)<br/>
+			<span class="comments"># Love forever.</span><br/>
+			boy.marry(girl, in_the_future=<span class="keyword">True</span>)<br/>
+			boy.live_happily_forever_with(girl)<br/>
 		</div>
 		<div id="loveHeart">
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					Qian, I have fallen in love with you for
+					Barenya, I have been in love with you since
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					Love u forever and ever.<br/>
-					<div class="signature">- Qingcai Cui | Germey</div>
+					Love you forever and ever.<br/>
+					<div class="signature">- Devansu</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="copyright">
-		Copyright © 2020 <a href='http://cuiqingcai.com'>cuiqingcai.com</a> 2014-2020
+		Copyright © 2025 Devansu | Love Story
 	</div>
 </div>
 <script type="text/javascript">
 	var offsetX = $("#loveHeart").width() / 2;
 	var offsetY = $("#loveHeart").height() / 2 - 55;
 	var together = new Date();
-	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
-	together.setFullYear(2018, 10, 5);
-	together.setHours(15);
+	together.setFullYear(2022, 6, 21);
+	together.setHours(0);
 	together.setMinutes(0);
 	together.setSeconds(0);
 	together.setMilliseconds(0);
@@ -90,7 +69,7 @@
 	if (!document.createElement('canvas').getContext) {
 		var msg = document.createElement("div");
 		msg.id = "errorMsg";
-		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		msg.innerHTML = "Your browser doesn't support HTML5!";
 		document.body.appendChild(msg);
 		$("#code").css("display", "none")
 		$("#copyright").css("position", "absolute");
