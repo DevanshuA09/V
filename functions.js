@@ -49,9 +49,15 @@ $(document).ready(function(){
     together.setSeconds(0);
     together.setMilliseconds(0);
 
-    setTimeout(function(){
-        startHeartAnimation();
-    }, 5000);
+    $(document).ready(function(){
+        if (document.createElement('canvas').getContext) {
+            setTimeout(function(){
+                startHeartAnimation();
+            }, 2000);
+        } else {
+            $("#errorMsg").show();
+        }
+    });
 
     timeElapse(together);
     setInterval(function(){
